@@ -1,38 +1,70 @@
+body {
+    margin: 0;
+    background-color: #1f2937; /* Dark background */
+    color: #ffffff; /* White text */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 .App {
-  text-align: center;
+    text-align: center;
+    opacity: 0; /* Initial opacity for animation */
+    transition: opacity 0.5s ease-in-out; /* Transition for fade-in */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.fade-in {
+    opacity: 1; /* Fully visible */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.fade-out {
+    opacity: 0; /* Fully hidden */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1 {
+    color: #3b82f6; /* Blue color */
+    margin-bottom: 20px;
+    font-size: 2.5em;
 }
 
-.App-link {
-  color: #61dafb;
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input, button, select {
+    padding: 10px;
+    margin: 10px 0; /* Vertical margin for spacing */
+    border: 2px solid #3b82f6; /* Blue border */
+    border-radius: 5px;
+    font-size: 1em;
+    outline: none;
+    background-color: #334155; /* Dark input fields */
+    color: #ffffff; /* White text */
+    transition: all 0.3s ease;
+    width: 200px; /* Fixed width for better alignment */
+}
+
+input:focus, button:hover {
+    border-color: #2563eb; /* Lighter blue on focus/hover */
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.5);
+}
+
+button {
+    background-color: #3b82f6; /* Blue button */
+    color: white;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #e5e7eb; /* Light gray for message text */
 }
